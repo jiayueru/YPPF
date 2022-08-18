@@ -50,7 +50,7 @@ __all__ = [
 @log.except_captured(EXCEPT_REDIRECT, source='course_views[editCourseActivity]', record_user=True)
 def editCourseActivity(request: HttpRequest, aid: int):
     """
-    编辑单次书院课程活动，addActivity的简化版
+    编辑单次书院活动，addActivity的简化版
 
     :param request: 修改单次课程活动的请求
     :type request: HttpRequest
@@ -200,8 +200,9 @@ def showCourseActivity(request: HttpRequest):
     _, user_type, html_display = utils.check_user_type(request.user)
     me = get_person_or_org(request.user, user_type)  # 获取自身
 
-    if user_type != "Organization" or me.otype.otype_name != COURSE_TYPENAME:
-        return redirect(message_url(wrong('只有书院课程组织才能查看此页面!')))
+    # jyr
+    # if user_type != "Organization" or me.otype.otype_name != COURSE_TYPENAME:
+    #     return redirect(message_url(wrong('只有书院课程组织才能查看此页面!')))
     my_messages.transfer_message_context(request.GET, html_display)
 
     all_activity_list = (
