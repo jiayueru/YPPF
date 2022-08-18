@@ -616,7 +616,7 @@ def requestLoginOrg(request: HttpRequest, name=None):  # 特指个人希望通�
 @log.except_captured(source='views[orginfo]', record_user=True)
 def orginfo(request: HttpRequest, name=None):
     """
-        orginfo负责呈现小组主页，逻辑和stuinfo是一样的，可以参考
+        负责呈现小组主页，逻辑和stuinfo是一样的，可以参考
         只区分自然人和法人，不区分自然人里的负责人和非负责人。任何自然人看这个小组界面都是【不可管理/编辑小组信息】
     """
     user = request.user
