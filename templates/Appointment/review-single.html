@@ -48,12 +48,20 @@
                            value="{{ longterm_appoint.appoint.Astart|date:'D H:i A' }} - {{ longterm_appoint.appoint.Afinish|date:'H:i A' }}">
                 </div>
                 <div class="form-group card-label">
+<<<<<<< HEAD
                     <label>起止日期</label>
+=======
+                    <label>起始日期</label>
+>>>>>>> 7e1a400af28f403827859e0af1a902d913c57067
                     <input disabled
                            class="form-control"
                            name="datetime"
                            type="text"
+<<<<<<< HEAD
                            value="{{ longterm_appoint.appoint.Astart|date:'n月j日' }} - {{ last_date|date:'n月j日' }}">
+=======
+                           value="{{ longterm_appoint.appoint.Astart|date:'n月j日' }} - {{ last_appoint.Astart|date:'n月j日' }}">
+>>>>>>> 7e1a400af28f403827859e0af1a902d913c57067
                 </div>
                 <div class="form-group card-label">
                     <label>预约次数</label>
@@ -71,7 +79,12 @@
                     <input disabled class="form-control" name="" type="text" value={{ longterm_appoint.appoint.Ausage }}>
                 </div>
                 {% if longterm_appoint.get_status_display == "审核中" %}
+<<<<<<< HEAD
                     <form method="POST" class="w-100 d-flex">
+=======
+                    <form action="" method="POST" class="w-100 d-flex">
+                        <input type="hidden" name="Lid" value={{ longterm_appoint.pk }}>
+>>>>>>> 7e1a400af28f403827859e0af1a902d913c57067
                         <input type="hidden" name="operation" value="approve">
                         <input type="hidden" name="reason" value="">
                         <button type="submit" class="btn btn-primary flex-fill mr-2" id="approve">通过</button>
@@ -90,11 +103,19 @@
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content" >
                     <div class="modal-body" >
+<<<<<<< HEAD
                         <form method="POST">
+=======
+                        <form action="" method="POST">
+>>>>>>> 7e1a400af28f403827859e0af1a902d913c57067
                             <div class="form-group card-label">
                                 <label>请填写未通过原因</label>
                                 <textarea class="form-control" name="reason" type="text" required value="" style="height:10rem;resize:none"></textarea>
                             </div>
+<<<<<<< HEAD
+=======
+                            <input type="hidden" name="Lid" value={{ longterm_appoint.pk }}>
+>>>>>>> 7e1a400af28f403827859e0af1a902d913c57067
                             <input type="hidden" name="operation" value="reject">
                             <div class="d-flex">
                                 <button type="submit" class="btn btn-primary flex-fill mr-2" id="reject">
