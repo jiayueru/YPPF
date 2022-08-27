@@ -4,15 +4,11 @@ import requests as requests
 import json
 from Appointment import *
 import threading
-<<<<<<< HEAD
 import requests
 from typing import List, Tuple, Union, Any
 from datetime import datetime, timedelta
 
 from django.http import HttpRequest
-=======
-from Appointment.models import Participant, Room, Appoint, CardCheckInfo  # 数据库模型
->>>>>>> 7e1a400af28f403827859e0af1a902d913c57067
 from django.contrib.auth.models import User
 from django.db import transaction  # 原子化更改数据库
 from django.db.models import Q
